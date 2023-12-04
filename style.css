@@ -28,6 +28,11 @@ body {
 
 }
 
+#unfunded-btn:hover, #funded-btn:hover, #all-btn:hover, #search-btn:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px darkgray;
+}
+
 .header {
     display: flex;
     background-color: lightblue;

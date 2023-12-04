@@ -126,15 +126,31 @@ function showAllGames() {
 
 }
 
+function searchGames() {
+    deleteChildElements(gamesContainer);
+
+    // grab the search input element
+    const searchInput = document.getElementById("search-bar");
+
+    // use filter() to get a list of games that have met or exceeded their goal
+    let games = GAMES_JSON.filter(game => game.name.toLowerCase().includes(searchInput.value.toLowerCase()));
+
+    // use the function we previously created to add unfunded games to the DOM
+    addGamesToPage(games);
+
+}
+
 // select each button in the "Our Games" section
 const unfundedBtn = document.getElementById("unfunded-btn");
 const fundedBtn = document.getElementById("funded-btn");
 const allBtn = document.getElementById("all-btn");
+const searchBtn = document.getElementById("search-btn");
 
 // add event listeners with the correct functions to each button
 unfundedBtn.addEventListener("click", filterUnfundedOnly);
 fundedBtn.addEventListener("click", filterFundedOnly);
 allBtn.addEventListener("click", showAllGames);
+searchBtn.addEventListener("click", searchGames);
 
 
 /*************************************************************************************

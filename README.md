@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 The following **optional** features are implemented:
 
 * [x] Fixed image sizing within game cards
-* [ ] Currently working on search feature
+* [x] Added Search Feature on game cards
 
 ## Video Walkthrough
 
